@@ -59,7 +59,6 @@ public class Format {
                 "  </tr>\n", statement.getVolumeCredit()));
         result.append(String.format("</table>\n" +
                 "\n" +
-                "<p><strong>Payment is required under 30 day. We can break your knees if you don't do so</strong></p>\n" +
                 "</body>\n" +
                 "</html>"));
         return result.toString();
