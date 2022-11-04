@@ -2,6 +2,8 @@
 public class Calculator {
     public static final String TRAGEDY = "tragedy";
     public static final String COMEDY = "comedy";
+    public final int COMEDY_BASE_AMOUNT = 30000;
+    public final int TRAGEDY_BASE_AMOUNT = 40000;
     public int theatreAmount(String type, Performance perf){
         switch (type) {
             case TRAGEDY -> {
@@ -20,14 +22,14 @@ public class Calculator {
         return credit;
     }
     public int tragedyAmount(int audience) {
-        int amount = 40000;
+        int amount = TRAGEDY_BASE_AMOUNT;
         if (audience > 30) {
             amount += 1000 * (audience - 30);
         }
         return amount;
     }
     public int comedyAmount(int audience) {
-        int amount = 30000;
+        int amount = COMEDY_BASE_AMOUNT;
         if (audience > 20) {
             amount += 10000 + 500 * (audience - 20);
         }
